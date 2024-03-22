@@ -1,6 +1,8 @@
 #! /usr/bin/env node
 
 import inquirer from "inquirer";
+import chalk from "chalk";
+
 
 //1.computer will generate a random number. Done
 //2.user input for guessing number. Done
@@ -17,9 +19,9 @@ const answers = await inquirer.prompt([
 ]);
 
 if(answers.userGuessedNumber === randomNumber){
-    console.log("Congratulations! You guessed right number.");
+    console.log(chalk.bold.greenBright("Congratulations! You guessed right number."));
 }else{
-    console.log("you guessed wrong number.");
+    console.log(chalk.bold.red("you guessed wrong number."));
 }
 
 
